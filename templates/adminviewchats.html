@@ -1,0 +1,72 @@
+{% extends 'adminheader.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style type="text/css">
+		table, tr, td, th{
+		border:1px solid black;
+		border-collapse:collapse;
+		text-align:center;
+		font-size:18px;
+		}
+		table{
+		width:100%;
+		}
+		th,td{
+		height:50px;
+		}
+	</style>
+</head>
+<body>
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Admin View Chats</h2>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/usermainpage" class="text-white">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Admin View Chats</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-shot-info section-sm">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12 mt-20">
+				<h2 class="mb-3">Admin View Chats Page</h2>
+				<p>
+<table>
+                    <thead>
+                    <tr>
+                        <th>Chat It</th>
+                        <th>User Id</th>
+                        <th>Question</th>
+                        <th>Answer</th>
+                        <th>DateTime</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data %}
+                    <tr>
+                        <td>{{row.id}}</td>
+                        <td>{{row.UserId}}</td>
+                        <td>{{row.Question}}</td>
+                        <td>{{row.Answer}}</td>
+                        <td>{{row.DateTime}}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                        </p>
+			</div>
+		</div>
+	</div>
+</section>
+
+</body>
+</html>
+{% endblock %}

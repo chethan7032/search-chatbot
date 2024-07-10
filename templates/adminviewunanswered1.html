@@ -1,0 +1,83 @@
+{% extends 'adminheader.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<section class="single-page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Admin Answer Page</h2>
+				<ol class="breadcrumb header-bradcrumb justify-content-center">
+					<li class="breadcrumb-item"><a href="/adminmainpage" class="text-white">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Admin Answer Page</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</section>
+
+ <!--Start Contact Us
+	=========================================== -->
+ <section class="contact-us" id="contact">
+ 	<div class="container">
+
+ 		<div class="row">
+ 			<!-- Contact Form -->
+ 			<div class="contact-form col-md-6 ">
+ 				<form id="contact-form" method="post" role="form" action="/adminviewunanswered2">
+
+					<div class="form-group mb-4">
+						Id :
+ 						<input type="text" placeholder="Id" class="form-control" name="id" id="id" required
+						style="border:1px solid black;" readonly value="{{data.id}}">
+ 					</div>
+
+					<div class="form-group mb-4">
+						Question :
+ 						<input type="text" placeholder="Question" class="form-control" name="question" id="question" required
+						style="border:1px solid black;" value="{{data.Question}}">
+ 					</div>
+
+					<div class="form-group mb-4">
+						User Id :
+ 						<input type="text" placeholder="User Id" class="form-control" name="userid" id="userid" required
+						style="border:1px solid black;" readonly value="{{data.UserId}}">
+ 					</div>
+
+					<div class="form-group mb-4">
+						First Name :
+ 						<input type="text" placeholder="First Name" class="form-control" name="fname" id="fname" required
+						style="border:1px solid black;" value="{{userdata.FirstName}}">
+ 					</div>
+
+ 					<div class="form-group mb-4">
+						Last Name :
+ 						<input type="text" placeholder="Last Name" class="form-control" name="lname" id="lname" required
+						style="border:1px solid black;" value="{{userdata.LastName}}">
+ 					</div>
+
+					<div class="form-group mb-4">
+						Answer :
+ 						<textarea rows="6" placeholder="Answer" class="form-control" name="answer" id="answer" required
+						style="border:1px solid black;"></textarea>
+ 					</div>
+
+ 					<div id="cf-submit">
+ 						<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit Answer">
+ 					</div>
+
+ 				</form>
+ 			</div>
+ 			<!-- ./End Contact Form -->
+
+ 		</div> <!-- end row -->
+ 	</div> <!-- end container -->
+ </section> <!-- end section -->
+
+</body>
+</html>
+{% endblock %}

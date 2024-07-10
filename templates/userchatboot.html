@@ -1,0 +1,74 @@
+{% extends 'userheader.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<section class="single-page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>User Chat Boot Page</h2>
+                <ol class="breadcrumb header-bradcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="/usermainpage" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">User Chat Boot Page</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-shot-info section-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mt-20">
+                <h2 class="mb-3">User Chat Boot Page</h2>
+                <p>
+
+                </p>
+                <p>
+                <form method="post" action="">
+                    <table>
+                        <tr>
+                            <th>Enter Ur Chat :</th>
+                            <td>
+                                <input type="text" name="usertext" placeholder="Enter Ur Chat"
+                                       style="width:400px;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <br>
+                                <center>
+                                <input type="submit" value="Find Chat"
+                                       style="width:200px; height:40px;"/>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                             <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h5>
+                                    {{answer}}
+                                </h5>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                </p>
+            </div>
+            <div class="col-lg-6 mt-4 mt-lg-0">
+                <img loading="lazy" class="img-fluid" src="/static/images/Pic3.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
+{% endblock %}
